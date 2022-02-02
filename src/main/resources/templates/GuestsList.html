@@ -13,6 +13,13 @@
 <body>
 
     <div style="margin: 50px">
+        <form class="form-inline" method="POST" th:object="${guest}" th:action="@{/guests}" style="margin: 20px 0">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" th:field="*{name}">
+                <input type="text" class="form-control" placeholder="Number of companions" th:field="*{numberCompanions}">
+                <button type="submit" class="btn btn-success">ADD</button>
+            </div>
+        </form>
         <div>
             <h1 class="panel-title">Guests List</h1>
         </div>
