@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
@@ -12,7 +12,31 @@
 </head>
 <body>
 
-    <button type="button" class="btn btn-success">Works?</button>
+    <div style="margin: 50px">
+        <div>
+            <h1 class="panel-title">Guests List</h1>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Companions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="guest : ${guests}">
+                        <td th:text="${guest.name}"></td>
+                        <td th:text="${guest.numberCompanions}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 
 </body>
 </html>
