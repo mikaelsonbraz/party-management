@@ -18,4 +18,21 @@ public class Guest implements Serializable{
     public String name;
 
     public Integer numberCompanions;
+
+    public String getName(){
+        return this.name;
+    }
+
+    public Integer getNumberCompanions(){
+        return  this.numberCompanions;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setNumberCompanions(Integer number){
+        this.numberCompanions = number;
+    }
+
 }
