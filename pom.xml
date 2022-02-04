@@ -87,14 +87,12 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupid>org.apache.maven.plugins</groupid>
-				<artifactid>maven-compiler-plugin</artifactid>
-				<version>3.7.0</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.4</version>
 				<configuration>
-					<compilerargs>
-						<arg>--add-modules</arg>
-						<arg>java.xml.bind</arg>
-					</compilerargs>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
