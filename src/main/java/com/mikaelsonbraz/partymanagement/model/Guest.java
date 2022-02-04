@@ -10,7 +10,7 @@ public class Guest implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     public long id;
 
     public String name;
