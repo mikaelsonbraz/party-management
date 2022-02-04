@@ -24,3 +24,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Maven Package
+      env:
+        MYSQL_TOKEN: ${{ secrets.MYSQL_TOKEN }}
+      run: mvn -B clean package
