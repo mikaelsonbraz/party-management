@@ -1,5 +1,7 @@
 package com.mikaelsonbraz.partymanagement.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import java.io.Serializable;
 
 import javax.persistence.*;
@@ -10,7 +12,8 @@ public class Guest implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name = "increment", strategy = "increment")
     public long id;
 
     public String name;
