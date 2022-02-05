@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.mikaelsonbraz.partymanagement.repository.Guests;
 
 @Controller
-@RequestMapping("guests")
+@RequestMapping("")
 public class GuestsController {
 
     @Autowired
